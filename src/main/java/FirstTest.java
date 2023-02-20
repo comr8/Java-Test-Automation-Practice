@@ -8,10 +8,13 @@ public class FirstTest {
     @Test
     public void testSearchGoogle(){
         WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
         driver.get("http://google.com");
         WebElement searchBox = driver.findElement(By.name("q"));
         searchBox.sendKeys("ChromeDriver");
         searchBox.submit();
+        driver.navigate().refresh();
+        driver.navigate().back();
         driver.quit();
     }
 }
