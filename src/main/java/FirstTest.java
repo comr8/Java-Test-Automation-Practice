@@ -14,14 +14,14 @@ public class FirstTest {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("http://google.com");
         WebElement searchBox = driver.findElement(By.name("q"));
-        if (searchBox.isDisplayed() == true) {
+        if (searchBox.isDisplayed()) {
             System.out.println("searchBox is Displayed");}
-        if (searchBox.isEnabled() == true) {
+        if (searchBox.isEnabled()) {
             System.out.println("searchBox is Enabled");}
         searchBox.sendKeys("ChromeDriver");
         searchBox.clear();
         searchBox.click();
-        if(searchBox.isSelected() == true){
+        if(searchBox.isSelected()){
             System.out.println("searchBox is Selected");}
         else System.out.println("searchBox is NOT Selected");
         searchBox.sendKeys("Java");
